@@ -5,16 +5,16 @@ import streamlit as st
 def main():
     html_temp = """
        <h1>Car Price Prediction</h1>
-       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5846164624651797"
-     crossorigin="anonymous"></script>
-    """
+       <meta name="google-adsense-account" content="ca-pub-5846164624651797">
+
+     """
     model = xgb.XGBRegressor()
     model.load_model("xgb_model.json")
     st.markdown(html_temp, unsafe_allow_html=True)
 
     st.markdown("This app will help you to predict your car selling price")
     p1 = st.number_input("Enter car showroom price",2.5 ,25.5, step=1.0)
-    p2 = st.number_input("Enter car showroom price",100 ,50000 ,step=100)
+    p2 = st.number_input("Enter car Driven",100 ,50000 ,step=100)
 
     s1 = st.selectbox("Select the fuel_type", ("Petrol", "Diesel", "CNG"))
     if s1== 'Petrol': 

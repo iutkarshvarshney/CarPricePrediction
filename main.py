@@ -5,6 +5,8 @@ import streamlit as st
 def main():
     html_temp = """
        <h1>Car Price Prediction</h1>
+       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5846164624651797"
+     crossorigin="anonymous"></script>
     """
     model = xgb.XGBRegressor()
     model.load_model("xgb_model.json")
